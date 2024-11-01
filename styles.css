@@ -1,0 +1,87 @@
+/* styles.css */
+
+body {
+    font-family: 'Yu Gothic', sans-serif;
+    background-color: #f9f0da;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+/* タイトルの浮遊アニメーション */
+.title {
+    font-size: 48px;
+    color: #d2691e;
+    text-shadow: 3px 3px 2px rgba(139, 69, 19, 0.7);
+    margin-bottom: 20px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* 画像スタイル */
+.logo-image {
+    width: 200px;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* ボタンの強調とホバースタイル */
+button {
+    font-size: 28px;
+    padding: 15px 30px;
+    background-color: #ffd700;
+    border: 2px solid #ff8c00;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(139, 69, 19, 0.5);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff8c00;
+    color: white;
+    transform: scale(1.1);
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* 抽選結果表示と抽選中のアニメーション */
+.result-text {
+    font-size: 36px;
+    color: #d2691e;
+    margin-top: 20px;
+    text-shadow: 1px 1px #8b4513;
+    transition: opacity 0.5s;
+}
+
+.loading {
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* 注意書きのスタイル */
+.note {
+    font-size: 16px;
+    color: #ff4500;
+    margin-top: 10px;
+    text-shadow: 1px 1px #8b4513;
+    font-weight: bold;
+}
+
+
